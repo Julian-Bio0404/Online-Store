@@ -1,4 +1,5 @@
 env/
 media/
 pictures/
+*/__pycache__
 db.sqlite3
