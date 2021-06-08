@@ -8,5 +8,5 @@ from .models import Product
 
 
 def store(request):
-    products = Producto.objects.all()
+    products = Product.objects.all()
     return render(request, "store/store.html", {"products":products})
