@@ -26,7 +26,7 @@ class Product(OnlineStoreModel):
 
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    picture = models.ImageField(upload_to="store/pictures", null=True, blank=True)
+    picture = models.ImageField(upload_to="store", null=True, blank=True)
     price = models.FloatField()
     available = models.BooleanField(default=True)
 
@@ -36,5 +36,5 @@ class Product(OnlineStoreModel):
         verbose_name_plural = "Products"
     
     def __str__(self):
-        return self.nombre 
+        return self.name 
 
