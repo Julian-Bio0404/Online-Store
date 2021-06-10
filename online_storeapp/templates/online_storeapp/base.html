@@ -29,6 +29,9 @@
           <li class="nav-item {% if request.path == '/tienda' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Store'%}">Tienda</a>
           </li>
+          <li class="nav-item {% if request.path == '/servicios' %}active{% endif %}px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Services'%}">Servicios</a>
+          </li>
           <li class="nav-item {% if request.path|slice:':6' == '/blog/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog'%}">Blog</a>
           </li>

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "online_storeapp",
     "store",
     "blog",
+    "services",
 ]
 
 MIDDLEWARE = [
