@@ -3,4 +3,4 @@ media/
 pictures/
 */__pycache__
 db.sqlite3
-
+Online_store/settings.py
