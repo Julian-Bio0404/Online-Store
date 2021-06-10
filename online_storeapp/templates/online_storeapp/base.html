@@ -2,17 +2,17 @@
 
 <head>
     {% load static %}
-    <link href="{% static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">    
+    <link href="{% static 'online_storeapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">     
-    <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet">
+    <link href="{% static 'online_storeapp/css/gestion.css' %}" rel="stylesheet">
 </head>
 
 <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">Tienda de Lácteos</span>
       </h1>
 
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -26,17 +26,17 @@
           <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Home'%}">Inicio</a>
           </li>
-          <li class="nav-item {% if request.path == '/servicios' %}active{% endif %}px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios'%}">Servicios</a>
-          </li>
           <li class="nav-item {% if request.path == '/tienda' %}active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda'%}">Tienda</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Store'%}">Tienda</a>
           </li>
-          <li class="nav-item {% if request.path == '/contacto' %}active{% endif %}px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto'%}">Contacto</a>
+          <li class="nav-item {% if request.path == '/servicios' %}active{% endif %}px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Services'%}">Servicios</a>
           </li>
           <li class="nav-item {% if request.path|slice:':6' == '/blog/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog'%}">Blog</a>
+          </li>
+          <li class="nav-item {% if request.path == '/contacto' %}active{% endif %}px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contact'%}">Contacto</a>
           </li>
         </ul>
       </div>
@@ -77,7 +77,7 @@
         <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
       </div>
 	</footer>
-    <script src="{% static 'ProyectoWebApp/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'online_storeapp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'online_storeapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

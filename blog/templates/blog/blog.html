@@ -1,0 +1,35 @@
+{% extends "online_storeapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% for post in posts %}
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.picture.url}}" alt="" style="width: 200;">
+                <div class="intro-text left-0 text-center bg-faded p-3 rounded">
+                    <h2 class="section-heading mb-4" >
+                        <span class="section-heading-lower">{{post.title}}</span>
+                        <span class="section-heading-upper">{{post.content}}</span>
+                    </h2>
+                    <div style="text-align: left; font-size: 0.96em;">
+                        Autor: {{post.author}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <section>
+        <div style="width:75%; background-color: yellow; margin: auto; text-align: center; color:white">
+            Categorias: 
+            {% for post in posts %}
+                {% for category in post.categories.all %}
+                    <a href="{% url 'Categoria' category.id %}" class="linksCategorias">{{category.name}}</a> &nbsp;&nbsp;&nbsp;
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
