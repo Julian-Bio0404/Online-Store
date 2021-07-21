@@ -2,6 +2,8 @@
 
 # Django
 from django.shortcuts import render
+
+# Models
 from blog.models import Post, CategoryBlog
 
 

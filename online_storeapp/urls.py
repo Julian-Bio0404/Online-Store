@@ -1,10 +1,14 @@
 """Urls ProyectWebApp"""
 
-#Aqui se alojan las Urls de la App
+# Django
 from django.urls import path
-from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import path
+
+# views
+from . import views
 
 urlpatterns = [
     path("", views.home, name="Home"),

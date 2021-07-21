@@ -2,7 +2,6 @@
 
 # Django
 from django.contrib import admin
-from .models import CategoryBlog, Post
 
 # Models
 from .models import CategoryBlog, Post

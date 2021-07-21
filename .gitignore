@@ -1,6 +1,6 @@
 env/
+.env
 media/
 pictures/
-*/__pycache__
+__pycache__/
 db.sqlite3
-Online_store/settings.py

@@ -1,7 +1,7 @@
 """Carrito views."""
 
 # Django
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 
 # Carrito
 from .carrito import Carrito

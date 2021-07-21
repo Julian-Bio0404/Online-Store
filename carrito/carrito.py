@@ -25,12 +25,9 @@ class Carrito:
             for key, value in self.carro.items():
                 if key == str(product.id):
                     value["quantity"] += 1
+                    value["price"] = float(value["price"]) + product.price
                     break
         self.save_carro()
-
-    def save_carro(self):
-        self.session["carro"] = self.carro
-        self.session.modified = True
 
     def delete(self, product):
         product.id = str(product.id)
@@ -42,6 +39,7 @@ class Carrito:
         for key, value in self.carro.items():
             if key == str(product.id):
                 value["quantity"] -= 1
+                value["price"] = float(value["price"]) - product.price
                 if value["quantity"] == 0:
                     self.delete(product)
                 break
@@ -52,5 +50,5 @@ class Carrito:
         self.session.modified = True
 
     def save_carro(self):
-        self.session["carro"] = {}
+        self.session["carro"] = self.carro
         self.session.modified = True
